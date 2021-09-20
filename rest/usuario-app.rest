@@ -1,0 +1,36 @@
+
+//------------------TODOS-----------------------------//
+
+###
+GET http://localhost:3000/listadoUsuarios
+
+//------------------UNO-------------------------------//
+
+### 
+GET http://localhost:3000/unoUsuario/613ee69c26cc5c0f67ccb672
+
+//------------------REGISTRAR--------------------------//
+###
+POST http://localhost:3000/registrarUsuario 
+Content-Type: application/json
+
+{
+    "nombre":"Nelson",
+    "apellido": "Rivas",
+    "direccion":"Chalatenango"
+}
+
+//------------------EDITAR--------------------------//
+### 
+PUT http://localhost:3000/editarUsuario/613ee69c26cc5c0f67ccb671
+Content-Type: application/json
+
+{
+    "nombre":"Javier",
+    "apellido": "Salazar",
+    "direccion":"Chalatenango"
+}
+
+//------------------ELIMINAR--------------------------//
+###
+DELETE http://localhost:3000/eliminarUsuario/613ee50a59d326619665fe2d

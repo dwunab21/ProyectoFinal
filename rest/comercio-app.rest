@@ -1,0 +1,35 @@
+
+
+//------------------TODOS-----------------------------//
+
+###
+GET http://localhost:3000/listadoComercios
+
+//------------------UNO-------------------------------//
+
+### 
+GET http://localhost:3000/unoComercio/613c74b8cd860860cf108d18
+
+//------------------REGISTRAR--------------------------//
+###
+POST http://localhost:3000/registrarComercio 
+Content-Type: application/json
+
+{
+    "nombre":"Hotel La Palma", 
+    "direccion":"La Palma"
+}
+
+//------------------EDITAR--------------------------//
+### 
+PUT http://localhost:3000/editarComercio/613c74b8cd860860cf108d19
+Content-Type: application/json
+
+{
+    "nombre":"Pollo Campero", 
+    "direccion":"Nueva Concepcion"
+}
+
+//------------------ELIMINAR--------------------------//
+###
+DELETE http://localhost:3000/eliminarComercio/613c7487cd860860cf108d17
