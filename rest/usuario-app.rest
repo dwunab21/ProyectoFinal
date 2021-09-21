@@ -22,13 +22,13 @@ Content-Type: application/json
 
 //------------------EDITAR--------------------------//
 ### 
-PUT http://localhost:3000/editarUsuario/613ee69c26cc5c0f67ccb671
+PUT http://localhost:3000/editarUsuario/613ee5e978208c48f56e9493
 Content-Type: application/json
 
 {
-    "nombre":"Javier",
-    "apellido": "Salazar",
-    "direccion":"Chalatenango"
+    "nombre": "Nicole",
+    "apellido": "Cabañas",
+    "direccion": "Chalatenango"
 }
 
 //------------------ELIMINAR--------------------------//

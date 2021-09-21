@@ -3,6 +3,7 @@ const jwt= require("jsonwebtoken")
 const llave = require("./llaveSecreta")
 const verificacion = Express.Router()
 
+
 verificacion.use((req,res,next)=>{
     let token=req.header['x-access-token'] || req.headers['authorization']
     if(!token){

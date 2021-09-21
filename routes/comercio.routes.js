@@ -60,6 +60,11 @@ ruta.post("/registrarComercio",middleware,cController.registrar)
  *        in: formData
  *        required: true
  *        type: string
+ *      - name: telefono
+ *        Descripcion: Nombre del Comercio
+ *        in: formData
+ *        required: true
+ *        type: string
  *     responses:
  *       200:
  *         description: Created
@@ -86,6 +91,11 @@ ruta.put("/editarComercio/:id",cController.actualizar)
  *        required: true
  *        type: string
  *      - name: direccion
+ *        Descripcion: Apellido del Usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *      - name: telefono
  *        Descripcion: Apellido del Usuario
  *        in: formData
  *        required: true
