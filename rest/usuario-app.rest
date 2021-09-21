@@ -33,4 +33,4 @@ Content-Type: application/json
 
 //------------------ELIMINAR--------------------------//
 ###
-DELETE http://localhost:3000/eliminarUsuario/613ee50a59d326619665fe2d
+DELETE http://localhost:3000/eliminarUsuario/614974d62dbf7328da6f73c4

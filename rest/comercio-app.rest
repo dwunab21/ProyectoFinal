@@ -8,7 +8,7 @@ GET http://localhost:3000/listadoComercios
 //------------------UNO-------------------------------//
 
 ### 
-GET http://localhost:3000/unoComercio/613c74b8cd860860cf108d18
+GET http://localhost:3000/unoComercio/613c74b8cd860860cf108d19
 
 //------------------REGISTRAR--------------------------//
 ###

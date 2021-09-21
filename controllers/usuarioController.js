@@ -2,7 +2,7 @@ const usuario =require( "../models/usuario.js")
 
 const controlador={}
 
-// GET Ver TODOS //
+// Ver TODOS //
 
 controlador.listado= async (req,res)=>{
     console.log("Ejecutando el FIND")
@@ -11,7 +11,7 @@ controlador.listado= async (req,res)=>{
 
 }
 
-// GET Ver UNO //
+// Ver UNO //
 
 controlador.uno= async (req,res)=>{
     console.log("Consulta individual")
@@ -19,7 +19,7 @@ controlador.uno= async (req,res)=>{
     res.json(unusuario)
 }
 
-// POST REGISTRAR //
+// REGISTRAR //
 
 controlador.registrar= async (req,res)=>{
     const nuevousuario = new usuario(req.body)
@@ -27,7 +27,7 @@ controlador.registrar= async (req,res)=>{
     await nuevousuario.save();
     res.send("Se creo nuevo usuario")
 }
-// PUT ACTUALIZAR //
+// ACTUALIZAR //
 
 controlador.actualizar= async (req,res)=>{
     console.log("Actualizando el usuario")
@@ -35,12 +35,36 @@ controlador.actualizar= async (req,res)=>{
     res.json({"status":"Usuario actualizado"})
 }
 
-// DELETE ELIMINAR //
+// ELIMINAR //
 
 controlador.eliminar= async (req,res)=>{
     console.log("Eliminación individual")
     await usuario.findByIdAndDelete(req.params.id)
     res.json({"status":"Usuario eliminado"})
+}
+
+controlador.autenticacion=(req,res)=>{
+    //servicio de consulta en la base de datos para verificar usuario y contraseña
+    if(req.body.usuario=="administrador" && req.body.clave=="123456"){
+        //payload
+
+        var datosToken={
+            autenticado:true,
+            email:"demo@gmail.com",
+            nombre:"Juan Perez"
+        }
+        const token=jwt.sign(datosToken,llave.llavesecreta,{
+            expiresIn:'1d'
+        })
+
+        res.json({
+            mensaje:"Usuario autenticado",
+            token:token
+        })
+
+    }else{
+        res.status(404).send({mensaje:"usuario no encontrado"})
+    }
 }
 
 module.exports= controlador

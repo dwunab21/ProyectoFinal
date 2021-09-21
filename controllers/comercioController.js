@@ -2,7 +2,7 @@ const comercio =require( "../models/comercio.js")
 
 const controlador={}
 
-// GET Ver TODOS //
+// Ver TODOS //
 
 controlador.listado= async (req,res)=>{
     console.log("Ejecutando el FIND")
@@ -11,7 +11,7 @@ controlador.listado= async (req,res)=>{
 
 }
 
-// GET Ver UNO //
+// Ver UNO //
 
 controlador.uno= async (req,res)=>{
     console.log("Consulta individual")
@@ -21,7 +21,7 @@ controlador.uno= async (req,res)=>{
     
 }
 
-// POST REGISTRAR //
+// REGISTRAR //
 
 controlador.registrar= async (req,res)=>{
     const nuevocomercio = new comercio(req.body)
@@ -29,7 +29,7 @@ controlador.registrar= async (req,res)=>{
     await nuevocomercio.save();
     res.send("Se creo nuevo comercio")
 }
-// PUT ACTUALIZAR //
+// ACTUALIZAR //
 
 controlador.actualizar= async (req,res)=>{
     console.log("Actualizando un comercio")
@@ -37,7 +37,7 @@ controlador.actualizar= async (req,res)=>{
     res.json({"status":"Comercio actualizado"})
 }
 
-// DELETE ELIMINAR //
+// ELIMINAR //
 
 controlador.eliminar= async (req,res)=>{
     console.log("Eliminación individual")

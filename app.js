@@ -1,5 +1,7 @@
 const  Express  =require("express");
 const Morgan =require("morgan");
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
 
 const RutasComercio =require("./routes/comercio.routes.js")
 const RutasUsuario =require ("./routes/usuario.routes.js") 
@@ -17,5 +19,20 @@ app.get("/",(req,res)=>{
     res.send("App Funcionando...");
 })
 
+const swaggerOptions = {
+    swaggerDefinition: {
+      info: {
+        title: "APP Comercio",
+        version: '1.0.0',
+        description: '<h3>Geolocalización de comercios de emprendedores en el departamento de Chalatenango.</h3>',
+      },
+    },
+    apis: ["./routes/*.js"] 
+    
+
+  };
+  
+  const swaggerDocs = swaggerJsDoc(swaggerOptions);
+  app.use('/Documentacion', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 module.exports= app
