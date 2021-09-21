@@ -15,7 +15,7 @@ verificacion.use((req,res,next)=>{
 
     if(token){
 
-        jwt.verify(token,llave.llavesecreta,(error,decoded)=>{
+        jwt.verify(token,llave.secreta,(error,decoded)=>{
             if (error){
                 return res.send(
                     {

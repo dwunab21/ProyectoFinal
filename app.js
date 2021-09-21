@@ -24,7 +24,7 @@ const swaggerOptions = {
       info: {
         title: "APP Comercio",
         version: '1.0.0',
-        description: '<h3>Geolocalización de comercios de emprendedores en el departamento de Chalatenango.</h3>',
+        description: '<h2>Geolocalización de comercios de emprendedores en el departamento de Chalatenango.</h2>',
       },
     },
     apis: ["./routes/*.js"] 

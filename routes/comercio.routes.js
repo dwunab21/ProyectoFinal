@@ -13,7 +13,7 @@ ruta.get("/listadoComercios",cController.listado)
  * /listadoComercios:
  *   get:
  *     tags: [Comercio]
- *     description: Get all books
+ *     description: <h2>Muestra el listado de comercios registrados</h2>
  *     responses:
  *       200:
  *         description: Success
@@ -28,7 +28,7 @@ ruta.get("/unoComercio/:id",cController.uno)
  * /unoComercio/{id}:
  *   get:
  *     tags: [Comercio]
- *     description: Get all books
+ *     description: <h2>Solicita un ID de un comercio registrado</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -36,8 +36,8 @@ ruta.get("/unoComercio/:id",cController.uno)
  *        required: true
  *        type: string
  *     responses:
- *       201:
- *         description: Created
+ *       200:
+ *         description: Success
  */
 
 //Registrar
@@ -48,7 +48,7 @@ ruta.post("/registrarComercio",middleware,cController.registrar)
  * /registrarComercio:
  *   post:
  *     tags: [Comercio]
- *     description: Get all books
+ *     description: <h2>Registra los datos de un nuevo comercio</h2>
  *     parameters:
  *      - name: nombre
  *        Descripcion: Nombre del Comercio
@@ -61,7 +61,7 @@ ruta.post("/registrarComercio",middleware,cController.registrar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
+ *       200:
  *         description: Created
  */
 
@@ -73,7 +73,7 @@ ruta.put("/editarComercio/:id",cController.actualizar)
  * /editarComercio/{id}:
  *   put:
  *     tags: [Comercio]
- *     description: Get all books
+ *     description: <h2>Actulizacion de comercio por ID</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -91,8 +91,8 @@ ruta.put("/editarComercio/:id",cController.actualizar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
- *         description: Created
+ *       200:
+ *         description: Success
  */
 //Eliminar
 ruta.delete("/eliminarComercio/:id",cController.eliminar)
@@ -102,7 +102,7 @@ ruta.delete("/eliminarComercio/:id",cController.eliminar)
  * /eliminarComercio/{id}:
  *   delete:
  *     tags: [Comercio]
- *     description: Get all books
+ *     description: <h2>Elimina un comercio por ID</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -110,7 +110,7 @@ ruta.delete("/eliminarComercio/:id",cController.eliminar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
+ *       200:
  *         description: Success
  */
 

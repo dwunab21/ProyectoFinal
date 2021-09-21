@@ -45,7 +45,7 @@ controlador.eliminar= async (req,res)=>{
 
 controlador.autenticacion=(req,res)=>{
     //servicio de consulta en la base de datos para verificar usuario y contraseña
-    if(req.body.usuario=="administrador" && req.body.clave=="123456"){
+    if(req.body.nombre=="administrador" && req.body.apellido=="123456"){
         //payload
 
         var datosToken={
@@ -53,7 +53,7 @@ controlador.autenticacion=(req,res)=>{
             email:"demo@gmail.com",
             nombre:"Juan Perez"
         }
-        const token=jwt.sign(datosToken,llave.llavesecreta,{
+        const token=jwt.sign(datosToken,llave.secreta,{
             expiresIn:'1d'
         })
 

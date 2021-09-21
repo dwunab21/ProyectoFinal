@@ -10,7 +10,7 @@ ruta.get("/listadoUsuarios",uController.listado)
 * /listadoUsuarios:
  *   get:
  *     tags: [Usuario]
- *     description: Get all books
+ *     description: <h2>Muestra el listado de usuarios registrados</h2>
  *     responses:
  *       200:
  *         description: Success
@@ -24,7 +24,7 @@ ruta.get("/unoUsuario/:id",uController.uno)
  * /unoUsuario/{id}:
  *   get:
  *     tags: [Usuario]
- *     description: Get all books
+ *     description: <h2>Solicita un ID de un usuario registrado</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -32,7 +32,7 @@ ruta.get("/unoUsuario/:id",uController.uno)
  *        required: true
  *        type: string
  *     responses:
- *       201:
+ *       200:
  *         description: Success
  */
 
@@ -44,7 +44,7 @@ ruta.post("/registrarUsuario",uController.registrar)
  * /registrarUsuario:
  *   post:
  *     tags: [Usuario]
- *     description: Get all books
+ *     description: <h2>Registra los datos de un nuevo usuario</h2>
  *     parameters:
  *      - name: nombre
  *        Descripcion: Nombre del Usuario
@@ -62,7 +62,7 @@ ruta.post("/registrarUsuario",uController.registrar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
+ *       200:
  *         description: Created
  */
 
@@ -74,7 +74,7 @@ ruta.put("/editarUsuario/:id",uController.actualizar)
  * /editarUsuario/{id}:
  *   put:
  *     tags: [Usuario]
- *     description: Get all books
+ *     description: <h2>Actulizacion de usuario por ID</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -97,8 +97,8 @@ ruta.put("/editarUsuario/:id",uController.actualizar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
- *         description: Created
+ *       200:
+ *         description: Success
  */
 
 //Eliminar
@@ -109,7 +109,7 @@ ruta.delete("/eliminarUsuario/:id",uController.eliminar)
  * /eliminarUsuario/{id}:
  *   delete:
  *     tags: [Usuario]
- *     description: Get all books
+ *     description: <h2>Elimina un usuario por ID</h2>
  *     parameters:
  *      - name: id
  *        Descripcion: Id del Usuario
@@ -117,7 +117,7 @@ ruta.delete("/eliminarUsuario/:id",uController.eliminar)
  *        required: true
  *        type: string
  *     responses:
- *       201:
+ *       200:
  *         description: Success
  */
 
