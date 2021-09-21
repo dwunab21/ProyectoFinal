@@ -4,26 +4,30 @@ const middleware =require("../middleware/verificacion.js")
 const ruta = Router();
 
 
+
 //Todos
+ruta.get("/listadoComercios",cController.listado)
 
 /**
  * @swagger
  * /listadoComercios:
  *   get:
+ *     tags: [Comercio]
  *     description: Get all books
  *     responses:
  *       200:
  *         description: Success
  * 
  */
-ruta.get("/listadoComercios",cController.listado)
 
 //Uno
+ruta.get("/unoComercio/:id",cController.uno)
 
 /**
  * @swagger
  * /unoComercio/{id}:
  *   get:
+ *     tags: [Comercio]
  *     description: Get all books
  *     parameters:
  *      - name: id
@@ -35,14 +39,15 @@ ruta.get("/listadoComercios",cController.listado)
  *       201:
  *         description: Created
  */
-ruta.get("/unoComercio/:id",cController.uno)
 
 //Registrar
+ruta.post("/registrarComercio",middleware,cController.registrar)
 
 /**
  * @swagger
  * /registrarComercio:
  *   post:
+ *     tags: [Comercio]
  *     description: Get all books
  *     parameters:
  *      - name: nombre
@@ -54,7 +59,7 @@ ruta.get("/unoComercio/:id",cController.uno)
  *       201:
  *         description: Created
  */
-ruta.post("/registrarComercio",middleware,cController.registrar)
+
 //Editar
 ruta.put("/editarComercio/:id",cController.actualizar)
 //Eliminar

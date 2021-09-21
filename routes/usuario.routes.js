@@ -2,7 +2,6 @@ const Router =require( "express")
 const uController =require( "../controllers/usuarioController.js")
 const ruta = Router();
 
-
 //Todos
 ruta.get("/listadoUsuarios",uController.listado)
 
@@ -10,11 +9,11 @@ ruta.get("/listadoUsuarios",uController.listado)
  * @swagger
 * /listadoUsuarios:
  *   get:
+ *     tags: [Usuario]
  *     description: Get all books
  *     responses:
  *       200:
  *         description: Success
- * 
  */
 
 //Uno
@@ -24,6 +23,7 @@ ruta.get("/unoUsuario/:id",uController.uno)
  * @swagger
  * /unoUsuario/{id}:
  *   get:
+ *     tags: [Usuario]
  *     description: Get all books
  *     parameters:
  *      - name: id
@@ -42,6 +42,7 @@ ruta.post("/registrarUsuario",uController.registrar)
  * @swagger
  * /registrarUsuario:
  *   post:
+ *     tags: [Usuario]
  *     description: Get all books
  *     parameters:
  *      - name: nombre
