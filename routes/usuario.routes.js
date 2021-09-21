@@ -38,6 +38,7 @@ ruta.get("/unoUsuario/:id",uController.uno)
 
 //Registrar
 ruta.post("/registrarUsuario",uController.registrar)
+
 /**
  * @swagger
  * /registrarUsuario:
@@ -67,8 +68,59 @@ ruta.post("/registrarUsuario",uController.registrar)
 
 //Editar
 ruta.put("/editarUsuario/:id",uController.actualizar)
+
+/**
+ * @swagger
+ * /editarUsuario/{id}:
+ *   put:
+ *     tags: [Usuario]
+ *     description: Get all books
+ *     parameters:
+ *      - name: id
+ *        Descripcion: Id del Usuario
+ *        in: path
+ *        required: true
+ *        type: string
+ *      - name: nombre
+ *        Descripcion: Nombre del Usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *      - name: apellido
+ *        Descripcion: Apellido del Usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *      - name: direccion
+ *        Descripcion: Direccion del usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *     responses:
+ *       201:
+ *         description: Created
+ */
+
 //Eliminar
 ruta.delete("/eliminarUsuario/:id",uController.eliminar)
+
+/**
+ * @swagger
+ * /eliminarUsuario/{id}:
+ *   delete:
+ *     tags: [Usuario]
+ *     description: Get all books
+ *     parameters:
+ *      - name: id
+ *        Descripcion: Id del Usuario
+ *        in: path
+ *        required: true
+ *        type: string
+ *     responses:
+ *       201:
+ *         description: Success
+ */
+
 //Autenticacion Tokens
 ruta.post("/autenticacion",uController.autenticacion)
 

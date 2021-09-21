@@ -55,6 +55,11 @@ ruta.post("/registrarComercio",middleware,cController.registrar)
  *        in: formData
  *        required: true
  *        type: string
+ *      - name: direccion
+ *        Descripcion: Nombre del Comercio
+ *        in: formData
+ *        required: true
+ *        type: string
  *     responses:
  *       201:
  *         description: Created
@@ -62,7 +67,51 @@ ruta.post("/registrarComercio",middleware,cController.registrar)
 
 //Editar
 ruta.put("/editarComercio/:id",cController.actualizar)
+
+/**
+ * @swagger
+ * /editarComercio/{id}:
+ *   put:
+ *     tags: [Comercio]
+ *     description: Get all books
+ *     parameters:
+ *      - name: id
+ *        Descripcion: Id del Usuario
+ *        in: path
+ *        required: true
+ *        type: string
+ *      - name: nombre
+ *        Descripcion: Nombre del Usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *      - name: direccion
+ *        Descripcion: Apellido del Usuario
+ *        in: formData
+ *        required: true
+ *        type: string
+ *     responses:
+ *       201:
+ *         description: Created
+ */
 //Eliminar
 ruta.delete("/eliminarComercio/:id",cController.eliminar)
+
+/**
+ * @swagger
+ * /eliminarComercio/{id}:
+ *   delete:
+ *     tags: [Comercio]
+ *     description: Get all books
+ *     parameters:
+ *      - name: id
+ *        Descripcion: Id del Usuario
+ *        in: path
+ *        required: true
+ *        type: string
+ *     responses:
+ *       201:
+ *         description: Success
+ */
 
 module.exports=ruta
