@@ -41,7 +41,7 @@ ruta.get("/unoComercio/:id",cController.uno)
  */
 
 //Registrar
-ruta.post("/registrarComercio",middleware,cController.registrar)
+ruta.post("/registrarComercio",cController.registrar)
 
 /**
  * @swagger

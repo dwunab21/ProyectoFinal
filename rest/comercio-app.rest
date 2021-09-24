@@ -16,20 +16,22 @@ POST http://localhost:3000/registrarComercio
 Content-Type: application/json
 
 {
-    "nombre":"Hotel La Palma", 
-    "direccion":"La Palma"
+     "nombre":"Hotel La Palma", 
+    "direccion":"La Palma",
+    "telefono":"78986543"
 }
 
 //------------------EDITAR--------------------------//
 ### 
-PUT http://localhost:3000/editarComercio/613c74b8cd860860cf108d19
+PUT http://localhost:3000/editarComercio/614a2b6df04a7813c0e337b3
 Content-Type: application/json
 
 {
-    "nombre":"Pollo Campero", 
-    "direccion":"Nueva Concepcion"
+    "nombre":"La Teca de Don Napo", 
+    "direccion":"Chalatenango",
+    "telefono":"78986543"
 }
 
 //------------------ELIMINAR--------------------------//
 ###
-DELETE http://localhost:3000/eliminarComercio/613c7487cd860860cf108d17
+DELETE http://localhost:3000/eliminarComercio/613c74b8cd860860cf108d19
